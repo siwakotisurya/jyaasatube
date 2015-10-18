@@ -9,7 +9,7 @@
 			Channel Privacy Status: <%=s.status%>
 			<br>
 				<br>
-			<button class="btn btn-primary">Click To upload Videos</button>	
+			<%=link_to"Upload Video",new_channel_video_path(s.channel_name),method: :post%>
 			<br>
 			<br>
 		</div>
