@@ -6,6 +6,12 @@ class ChannelsController < ApplicationController
   end
 
   def create
+  	@channel = Channel.new(set_db_field)
+  	if @channel.save
+  		binding.pry
+  	else
+  		bidning.pry
+  	end
   end
 
   def edit
@@ -13,4 +19,10 @@ class ChannelsController < ApplicationController
 
   def destroy
   end
+
+  private 
+  def set_db_field
+  	params.require(:channel).permit(:channel_name, :status, :user_id)
+  end
+
 end

@@ -9,10 +9,11 @@
 			<div class="alert alert-info">
   			<strong>* </strong>Enter a channel name
 			</div>
-			<input type="text" class="form-control" placeholder="eg: Jyaasa">
+			<%= f.text_field :channel_name, :class=>"form-control", :placeholder=>"Eg: Jyaasa"%>
 			<br>
 			<div class="form-group">
 			<%= f.select :status, ['Private', 'Public'],{},:class=>"col-md-12"%>
+			<%= f.hidden_field :user_id, :value=>current_user.id%>
 			<br><br>
 			</div>
 			<button class="btn btn-primary btn-lg">Create </button>
