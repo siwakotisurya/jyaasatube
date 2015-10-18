@@ -8,9 +8,11 @@ class ChannelsController < ApplicationController
   def create
   	@channel = Channel.new(set_db_field)
   	if @channel.save
-  		binding.pry
+  		flash[:notice] = "Channel Saved"
+  		redirect_to "new"
   	else
-  		bidning.pry
+  		flash[:notice] = "Sorry Channel Could not saved"
+  		render "new"
   	end
   end
 
