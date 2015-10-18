@@ -1,0 +1,80 @@
+body {
+  padding-top:50px;
+  background: #F1F1F1;
+}
+
+@media (min-width: 979px) {
+
+  #midCol.affix-top {
+      position:fixed;
+      width:265px;
+      margin-right:0px;
+      
+  }
+  
+  #midCol.affix {
+      position:static;
+      width:100%;
+  }
+
+}
+
+@media (min-width: 767px) {
+  .affix,.affix-top {
+      position:fixed;
+  }
+}
+#sidebar{
+  margin-top: 8px;  
+  padding-left: 20px;
+  width: 230px;
+  background: #FFF;
+    border: 1px solid #e8e8e8;
+    height: 700px;
+} 
+#sidebar p{
+  padding-left: 15px;
+}
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse{
+  margin-left: 18px;
+
+}
+.navbar-default{
+  background: #FFF;
+  height: 60px;
+
+}
+#search {
+  margin-left:95px;
+}
+#content_top{
+  margin-top: 20px;
+  background: #FFF; 
+  margin-left: 15px;
+  border: 1px solid #e8e8e8;
+}
+#content_top h4{
+  margin-left: 40px;
+}
+}
+@media only screen  and (max-width: 900px) {
+   #navbar {
+       display: none !important;
+
+   }
+   #content_top{
+    margin-left: -5px;
+   }
+ .navbar-default .navbar-toggle{
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+ }  
+}
+a{
+  color:black;
+}
+.nav > li > a:hover, .nav > li > a:focus{
+  background-color:#444;
+  color:white;
+}
