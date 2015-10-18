@@ -2,6 +2,7 @@ class ChannelsController < ApplicationController
   
 	layout "jyaasa_tube"
   def index
+  	@channels = Channel.all
   end
 
   def new
@@ -12,7 +13,7 @@ class ChannelsController < ApplicationController
   	@channel = Channel.new(set_db_field)
   	if @channel.save
   		flash[:notice] = "Channel Saved"
-  		redirect_to "new"
+  		redirect_to new_channel_path
   	else
   		flash[:notice] = "Sorry Channel Could not saved"
   		render "new"

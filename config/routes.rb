@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'video/index'
+
+  get 'video/new'
+
+  get 'video/create'
+
   resources :channels
 
   devise_for :users, controllers: { sessions: "users/sessions" }

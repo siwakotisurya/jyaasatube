@@ -7,7 +7,16 @@ module ChannelsHelper
 	  			<strong>#{s}</strong>
 				</div>'.html_safe 
 			end
-			
 		end
 	end
+		
+	def flash_show
+		if flash[:notice]
+			show = '<div class="alert alert-danger">
+	  			<strong>'+flash[:notice]+'</strong>
+				</div>'
+				show.html_safe
+		end
+	end
+
 end
