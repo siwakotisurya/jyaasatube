@@ -1,4 +1,6 @@
 class ChannelsController < ApplicationController
+  
+	layout "jyaasa_tube"
   def new
   end
 

@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'channels/new'
-
-  get 'channels/create'
-
-  get 'channels/edit'
-
-  get 'channels/destroy'
-
-  get 'jyaasa_tubes/index'
+  resources :channels
 
   devise_for :users, controllers: { sessions: "users/sessions" }
 
