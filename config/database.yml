@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password:
+  username: jyaasa_tube
+  password: password123
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: jyassa_tube_development
+  database: jyaasa_tube_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
