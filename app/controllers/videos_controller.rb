@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+  
+	layout "jyaasa_tube"
   def index
   end
 
