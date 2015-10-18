@@ -2,6 +2,7 @@ class ChannelsController < ApplicationController
   
 	layout "jyaasa_tube"
   def new
+  	@channel = Channel.new
   end
 
   def create

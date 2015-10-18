@@ -2,7 +2,7 @@
 	<div class="col-md-10 col-md-push-2" id="content_top">
 		<h4>By Creating a Channel You Can upload Videos and Share as public or make private</h4>
 		<div  id="content_top">
-		<form >
+		<%= form_for @channel do |f| %>
 		<div class="col-md-4">
 			<br>
 			<br>
@@ -11,9 +11,13 @@
 			</div>
 			<input type="text" class="form-control" placeholder="eg: Jyaasa">
 			<br>
+			<div class="form-group">
+			<%= f.select :status, ['Private', 'Public'],{},:class=>"col-md-12"%>
+			<br><br>
+			</div>
 			<button class="btn btn-primary btn-lg">Create </button>
 		</div>
-		</form>
+		<%end%>
 		</div>
 	</div>
 		</div>
