@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151018091938) do
+ActiveRecord::Schema.define(version: 20151018113331) do
 
   create_table "channels", force: :cascade do |t|
     t.string   "channel_name", limit: 255
@@ -40,5 +40,14 @@ ActiveRecord::Schema.define(version: 20151018091938) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "video",           limit: 255
+    t.string   "video_file_name", limit: 255
+    t.text     "video_meta",      limit: 65535
+    t.string   "video_file_size", limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
 end
