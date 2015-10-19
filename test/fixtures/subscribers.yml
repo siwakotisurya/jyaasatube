@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  subscriber_id: 
-  channel_id: 
+  name: MyString
 
 two:
-  subscriber_id: 
-  channel_id: 
+  name: MyString

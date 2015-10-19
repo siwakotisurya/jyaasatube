@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   resources :channels, param: :name do
+    resources :subscribers
     resources :videos
-    resources :subscriptions   
+    resources :users   
   end
 
   devise_for :users, controllers: { sessions: "users/sessions" }

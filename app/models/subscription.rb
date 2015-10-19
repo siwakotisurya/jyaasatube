@@ -1,4 +1,4 @@
 class Subscription < ActiveRecord::Base
-	belongs_to :user
-	belongs_to :channel
+  belongs_to :subscriber
+  belongs_to :channel
 end
