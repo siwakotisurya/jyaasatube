@@ -15,9 +15,9 @@ class VideosController < ApplicationController
   	@channel = Channel.find_by_name(params[:channel_name])
   	@video = @channel.videos.new(set_db_field)
   	if @video.save
-  	
+  	  render "new"
   	else
-
+      render "new"
   	end
   end
 

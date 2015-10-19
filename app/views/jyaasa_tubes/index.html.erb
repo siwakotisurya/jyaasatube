@@ -1,19 +1,22 @@
 <div class="container-fluid">
 	<div class="col-md-10 col-md-push-2" id="content_top">
 		<h4>Videos</h4>
-	<%@videos.each do |s|%>
+		<%@videos.each do |s|%>
 			<%= video_tag s.video, width: "280", height: "200", controls: true %>
-			<%end%>
-
+		<%end%>
 	</div>
-
 	<div class="col-md-10 col-md-push-2" id="content_top">
-			<h4>Channels</h4>
-			<%@channels.each do |c|%>
-				<div class="col-md-2">
-				Channel: <%=c.name%><br><br>
-				<%=link_to "subscribe", channel_user_subscriptions_path(c.name, current_user.id), method: :post%>
-				</div>
+		<%if flash[:notice]%>
+			<h5><%=flash[:notice]%></h5>
+		<%end%>
+		<h4>Channels</h4>
+		<%@channels.each do |c|%>
+			<div class="col-md-3">
+			Channel: <%=c.name%><br><br>
+			<%if user_signed_in?%>
+			<%=link_to "subscribe", channel_user_subscriptions_path(c.name, current_user.id), method: :post%>
 			<%end%>
+			</div>
+		<%end%>
 	</div>
 </div>

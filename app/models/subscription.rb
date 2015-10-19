@@ -5,6 +5,7 @@ class Subscription < ActiveRecord::Base
 	def add(user, channel, subscription)
 		subscription.user_id = user.id
 		subscription.channel_id = channel.id
+
 	end
 
 end
