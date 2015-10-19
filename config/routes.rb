@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'subscriptions/create'
+
   resources :channels, param: :name do
     resources :videos
     resources :users   
