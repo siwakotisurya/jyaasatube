@@ -4,12 +4,12 @@
 		
 				<%@channels.each do |s|%>
 			<div class="col-md-4">
-			<h5>Channel Name:	<%=s.channel_name%></h5>
+			<h5>Channel Name: <%=s.name%></h5>
 			<br>
 			Channel Privacy Status: <%=s.status%>
 			<br>
 				<br>
-			<%=link_to"Upload Video",new_channel_video_path(s.channel_name)%>
+			<%=link_to"Upload Video",new_channel_video_path(s.name)%>
 			<br>
 			<br>
 		</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151018160312) do
+ActiveRecord::Schema.define(version: 20151018163340) do
 
   create_table "channels", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 20151018160312) do
     t.string   "video_file_size", limit: 255
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.integer  "channel_name",    limit: 4
+    t.integer  "channel_id",      limit: 4
   end
 
 end

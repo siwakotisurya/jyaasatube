@@ -28,7 +28,7 @@ class ChannelsController < ApplicationController
 
   private 
   def set_db_field
-  	params.require(:channel).permit(:channel_name, :status, :user_id)
+  	params.require(:channel).permit(:name, :status, :user_id)
   end
 
 end

@@ -10,6 +10,8 @@ gem 'paperclip'
 
 gem 'paperclip-ffmpeg' 
 
+gem 'paperclip-av-transcoder'
+
 gem 'rails', '4.2.4'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.3.18'
