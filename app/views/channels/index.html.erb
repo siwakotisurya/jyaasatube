@@ -1,14 +1,13 @@
 <div class="container-fluid">
 	<div class="col-md-10 col-md-push-2" id="content_top">
 		<h4>Your channels</h4>
-		
-				<%@channels.each do |s|%>
+			<%@channels.each do |s|%>
 			<div class="col-md-4">
 			<h5>Channel Name: <%=s.name%></h5>
 			<br>
 			Channel Privacy Status: <%=s.status%>
 			<br>
-				<br>
+			<br>
 			<%=link_to"Upload Video",new_channel_video_path(s.name)%>
 			<br>
 			<br>

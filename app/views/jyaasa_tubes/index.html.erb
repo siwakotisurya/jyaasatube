@@ -12,7 +12,7 @@
 			<%@channels.each do |c|%>
 				<div class="col-md-2">
 				Channel: <%=c.name%><br><br>
-				<button class="btn btn-primary btn-lg">Subscribe</button>
+				<%=link_to "subscribe",  new_channel_subscription_path(c.name)%>
 				</div>
 			<%end%>
 	</div>
