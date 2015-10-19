@@ -24,12 +24,14 @@ class ChannelsController < ApplicationController
   def edit
   end
 
-  def destroy
-  end
 
   private 
   def set_db_field
   	params.require(:channel).permit(:name, :status, :user_id)
   end
+
+  def set_subscribe_field
+  end
+  
 
 end
