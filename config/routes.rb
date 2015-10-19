@@ -2,10 +2,16 @@ Rails.application.routes.draw do
 
   get 'subscriptions/create'
 
+  get 'subscriptions/new'
+
+  get 'subscriptions/create'
+
   
   resources :channels, param: :name do
     resources :videos
-    resources :users  
+    resources :users do 
+      resources :subscriptions
+    end  
   end
 
   devise_for :users, controllers: { sessions: "users/sessions" }
