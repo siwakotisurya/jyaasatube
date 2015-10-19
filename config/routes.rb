@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   resources :channels, param: :name do
-    resources :subscribers
     resources :videos
     resources :users   
   end

@@ -1,5 +1,6 @@
 class ChannelsController < ApplicationController
   
+  before_action :authenticate_user! 
 	layout "jyaasa_tube"
   def index
   	@channels = Channel.all
