@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'subscriptions/new'
+
+  get 'subscriptions/create'
+
+  get 'subscriptions/edit'
+
+  get 'subscriptions/update'
+
   resources :channels, param: :name do
     resources :videos 
   end
